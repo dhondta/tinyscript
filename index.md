@@ -26,15 +26,15 @@ pip install --user tinyscript
 
 ### Create from template
 
-<p align="center"><img src="https://dhondta.github.io/python-tinyscript/docs/demos/create.svg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dhondta/python-tinyscript/master/docs/demos/create.svg"></p>
 
 ### Edit source
 
-<p align="center"><img src="https://dhondta.github.io/python-tinyscript/docs/demos/edit.svg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dhondta/python-tinyscript/master/docs/demos/edit.svg"></p>
 
 ### Run your tool
 
-<p align="center"><img src="https://dhondta.github.io/python-tinyscript/docs/demos/run.svg"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/dhondta/python-tinyscript/master/docs/demos/run.svg"></p>
 
 ## Example tools
 
