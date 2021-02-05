@@ -63,4 +63,5 @@ pip install --user tinyscript
 - [PDF Preview Generator](https://gist.github.com/dhondta/f57dfde304905644ca5c43e48c249125)
 - [Recursive Compression](https://github.com/dhondta/recursive-compression)
 - [WebGrep](https://github.com/dhondta/webgrep) (Web text search)
+- [Zotero CLI](https://github.com/dhondta/zotero-cli)
 
