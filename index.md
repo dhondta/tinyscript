@@ -14,7 +14,32 @@ use-site-title: false
 
 ## Introduction
 
-This library is aimed to provide useful features and to shorten required lines of code for writing nice-looking command-line interface tools.
+This library is aimed to provide useful features and helpers in order to shorten the number of required lines of code for writing simple and nice-looking command-line interface tools. It is based on `argparse` and is considered a **development kit**, on the contrary of popular **frameworks** like [`cement`](https://builtoncement.com/), [`click`](https://click.palletsprojects.com) or [`docopt`](http://docopt.org), as it is not aimed to reinvent the wheel in yet another paradigm.
+
+## Philosophy
+
+This library is built with the DRY (*Don't Repeat Yourself*) and KISS (*Keep It Stupid Simple*) philosophies in mind ; the whole machinery of Tinyscript holds in its **star import** (`from tinyscript import *`) and its **initialization** (with the `initialize` function).
+
+It is aimed to shorten required code by setting a few things while loaded:
+- a [*proxy* parser](https://python-tinyscript.readthedocs.io/en/latest/internals.html#proxy-parser) (coming from the star import) collects arguments definitions and formats help at initialization, preventing from rewriting the whole bunch of code needed to declare an [`ArgumentParser`](https://docs.python.org/3/library/argparse.html#example) (and define its epilog, and so forth)
+- a [main (colored) logger](https://python-tinyscript.readthedocs.io/en/latest/internals.html#pre-configured-colored-logger) is preconfigured and can be tuned through two constants so that we don't care for writing a bunch of code needed to configure logging
+- [preimports](https://python-tinyscript.readthedocs.io/en/latest/internals.html#pre-imports) (while a bit anti-Pythonic, we confess) of common libraries also reduces the quantity of code required
+- among these, some [modules are enhanced](https://python-tinyscript.readthedocs.io/en/latest/enhancements.html) with new functions and classes that are not natively foreseen
+
+Leveraging this allows to create very short scripts with **only the real code that matters**, reducing the code to be rewritten to create efficient, nice-looking and sophisticated CLI tools.
+
+Note that, while star imports should be avoided according to Python's style guide (see [PEP8](https://pep8.org/#imports)), it is deliberately extensively used and covering a huge scope in order to shorten code length. This "anti-pattern" pays off after creating a few tools, when we can realize it shortens parts of the code that are often repeated from a tool to another (e.g. for shaping tool's help message).
+
+## Usage
+
+It is designed to be as simple and straightforward to use as possible. In order to learn and use it, you only need your browser (for consulting the documentation), a text editor and a good Python Interpreter (e.g. [IDLE](https://docs.python.org/3/library/idle.html)) for using auto-completion or an IDE like [PyCharm](https://www.jetbrains.com/pycharm/) to get helpers suggested.
+
+The point is that you will use:
+- [features](https://python-tinyscript.readthedocs.io/en/latest/utility.html), enabled by setting flags in the "master" function called `ìnitialize`
+- [helpers](https://python-tinyscript.readthedocs.io/en/latest/helpers.html), grouped under the "master" submodule called `ts`
+- [reporting](https://python-tinyscript.readthedocs.io/en/latest/reporting.html) objects from the global scope
+
+Please see the [example tools](#example-tools) herebelow for examples of usage of features, helpers and reporting.
 
 ## Quick Start
 
